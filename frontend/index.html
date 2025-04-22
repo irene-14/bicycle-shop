@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Bike Customizer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Bike Customizer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Customize Your Bike</h1>
-    <form id="customizationForm">
-        <label>Frame Type:
-            <select name="frameType" id="frameType"></select>
-        </label>
-        <label>Frame Finish:
-            <select name="frameFinish" id="frameFinish"></select>
-        </label>
-        <label>Wheels:
-            <select name="wheels" id="wheels"></select>
-        </label>
-        <label>Rim Color:
-            <select name="rimColor" id="rimColor"></select>
-        </label>
-        <label>Chain:
-            <select name="chain" id="chain"></select>
-        </label>
-        <p>Total Price: <span id="price">0</span> EUR</p>
-        <button type="button" onclick="addToCart()">Add to Cart</button>
-    </form>
-    <script src="script.js"></script>
+  <header>
+    <h1>Premium Bike Customizer</h1>
+    <p class="tagline">Build your dream bicycle, one part at a time</p>
+  </header>
+  
+  <div class="container">
+    <div class="customizer">
+      <h2>Customize Your Bike</h2>
+      
+      <div class="price-panel">
+        <div class="price-display">
+          <p>Total Price: <span id="totalPrice">0</span> EUR</p>
+        </div>
+        <div class="panel-buttons">
+            <button type="button" class="add-to-cart disabled" onclick="addToCart()" disabled>Add to Cart</button>
+            <button type="button" class="clear-selection" onclick="clearSelection()">Clear</button>
+        </div>
+      </div>
+      
+      <form id="customizationForm">
+        <div class="form-group">
+          <label for="frame-type">Frame Type</label>
+          <select name="frame-type" id="frame-type" class="part-selection"></select>
+        </div>
+        
+        <div class="form-group">
+          <label for="frame-finish">Frame Finish</label>
+          <select name="frame-finish" id="frame-finish" class="part-selection"></select>
+        </div>
+        
+        <div class="form-group">
+          <label for="rim-color">Rim Color</label>
+          <select name="rim-color" id="rim-color" class="part-selection"></select>
+        </div>
+        
+        <div class="form-group">
+          <label for="wheels">Wheels</label>
+          <select name="wheels" id="wheels" class="part-selection"></select>
+        </div>
+        
+        <div class="form-group">
+          <label for="chain">Chain</label>
+          <select name="chain" id="chain" class="part-selection"></select>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2025 Marcus Bike Shop. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
