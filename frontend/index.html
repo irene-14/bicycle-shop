@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bike Customizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Customize Your Bike</h1>
+    <form id="customizationForm">
+        <label>Frame Type:
+            <select name="frameType" id="frameType"></select>
+        </label>
+        <label>Frame Finish:
+            <select name="frameFinish" id="frameFinish"></select>
+        </label>
+        <label>Wheels:
+            <select name="wheels" id="wheels"></select>
+        </label>
+        <label>Rim Color:
+            <select name="rimColor" id="rimColor"></select>
+        </label>
+        <label>Chain:
+            <select name="chain" id="chain"></select>
+        </label>
+        <p>Total Price: <span id="price">0</span> EUR</p>
+        <button type="button" onclick="addToCart()">Add to Cart</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

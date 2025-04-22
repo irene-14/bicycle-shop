@@ -1,0 +1,25 @@
+{
+    "frameType": [
+        {"name": "Full-suspension", "stock": true},
+        {"name": "Diamond", "stock": true},
+        {"name": "Step-through", "stock": false}
+    ],
+    "frameFinish": [
+        {"name": "Matte", "stock": true},
+        {"name": "Shiny", "stock": true}
+    ],
+    "wheels": [
+        {"name": "Road wheels", "stock": true},
+        {"name": "Mountain wheels", "stock": true},
+        {"name": "Fat bike wheels", "stock": false}
+    ],
+    "rimColor": [
+        {"name": "Red", "stock": true},
+        {"name": "Black", "stock": true},
+        {"name": "Blue", "stock": true}
+    ],
+    "chain": [
+        {"name": "Single-speed chain", "stock": true},
+        {"name": "8-speed chain", "stock": true}
+    ]
+}
