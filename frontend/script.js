@@ -158,21 +158,26 @@ loadOptions();
  * Adds the current bike configuration to the cart
  * Called when the "Add to Cart" button is clicked
  */
-function addToCart() {
-  // Collect all selected options
+async function addToCart() {
   const selectedOptions = {};
+  // Collect all selected options
   document.querySelectorAll(".part-selection").forEach((part) => {
     if (part.value) {
       selectedOptions[part.name] = part.value;
     }
   });
-  
-  // Get the total price
-  const totalPrice = parseFloat(document.getElementById("totalPrice").textContent);
-  
-  // For now, just show a confirmation message
-  alert(`Bike added to cart! Total: €${totalPrice.toFixed(2)}`);
-  
-  // Reset the form after adding to cart
+
+  const response = await fetch("http://localhost:8080/cart", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(selectedOptions)
+  });
+
+  const result = await response.json();
+  alert(`Bike added to cart! Total: €${result.total.toFixed(2)}`);
+    // Reset the form after adding to cart
+
   clearSelection();
 }
