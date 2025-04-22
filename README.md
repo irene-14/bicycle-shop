@@ -28,7 +28,7 @@ This separation:
 - **Allows scalability**: New parts or categories can be added without modifying the frontend logic.
 - **Enhances maintainability**: The backend can evolve independently of the frontend, making it easier to maintain or extend.
 
-### 🔧 2. JSON-Based Data Storage
+### 2. JSON-Based Data Storage
 
 Initially, a single JSON file was considered for both product definitions and pricing rules. However, for **modularity and scalability**, the project uses two separate JSON files:
 
@@ -75,7 +75,7 @@ The system consists of three main components:
   - **`products.json`**: Contains information about the parts, options, and their prices.
   - **`special_pricing.json`**: Contains information about the special prices for specific parts.
 
-## 💡 Future Improvements
+## Future Improvements
 
 ### 1. Real-Time Bicycle Preview
 A real-time visual preview of the bicycle could be displayed as users select different parts (frame, wheels, color). This would enhance the user experience by giving customers an immediate visual representation of their choices.
