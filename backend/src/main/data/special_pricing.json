@@ -1,0 +1,19 @@
+{
+    "specialPricingRules": [
+      {
+        "condition": {
+          "frame": "full-suspension",
+          "finish": "matte"
+        },
+        "extraCost": 50
+      },
+      {
+        "condition": {
+          "frame": "diamond",
+          "finish": "matte"
+        },
+        "extraCost": 35
+      }
+    ]
+  }
+  

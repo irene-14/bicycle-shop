@@ -1,14 +1,17 @@
 #!/bin/bash
 
 echo "Compiling Java backend..."
-cd backend
-javac Server.java || { echo "Compilation failed"; exit 1; }
+javac -d backend/out backend/src/main/java/Server.java || { echo "❌ Compilation failed"; exit 1; }
 
-echo "Starting Java backend..."
-gnome-terminal -- bash -c "java Server; exec bash" 2>/dev/null || \
-x-terminal-emulator -e "java Server" 2>/dev/null || \
-echo "Open a new terminal and run: java Server" &
+echo "✅ Java backend compiled."
 
-cd ..
-echo "Starting frontend server at http://localhost:3000"
-serve frontend
+echo "Starting Java backend in this terminal..."
+java -cp backend/out Server &
+BACKEND_PID=$!
+
+echo "✅ Backend started (PID: $BACKEND_PID)."
+echo "Starting frontend server at http://localhost:3000..."
+
+npx serve frontend
+
+kill $BACKEND_PID

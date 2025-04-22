@@ -1,0 +1,37 @@
+{
+  "parts": {
+    "frame-type": {
+      "options": {
+        "full-suspension": 130,
+        "diamond": 90,
+        "step-through": 70
+      }
+    },
+    "frame-finish": {
+      "options": {
+        "matte": 50,
+        "shiny": 30
+      }
+    },
+    "wheels": {
+      "options": {
+        "road": 80,
+        "mountain": 100,
+        "fat-bike": 120
+      }
+    },
+    "rim-color": {
+      "options": {
+        "red": 40,
+        "black": 15,
+        "blue": 20
+      }
+    },
+    "chain": {
+      "options": {
+        "single-speed": 43,
+        "multi-speed": 53
+      }
+    }
+  }
+}
